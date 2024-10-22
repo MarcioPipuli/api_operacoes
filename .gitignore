@@ -1,0 +1,14 @@
+# Ignorar a pasta venv
+venv/
+
+# Ignorar arquivos relacionados ao Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignorar arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar configurações de IDEs comuns (opcional)
+.vscode/
