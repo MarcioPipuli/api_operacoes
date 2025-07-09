@@ -7,18 +7,18 @@ from fastapi import Depends
 from fastapi import Response
 from fastapi import HTTPException
 
-from models.entities import OperationCreate
-from models.entities import OperationResponse
-from models.entities import OperationUpdate
+from ..models.entities import OperationCreate
+from ..models.entities import OperationResponse
+from ..models.entities import OperationUpdate
 
 from sqlalchemy.orm import Session
 from sqlalchemy.future import select
 
-from models.models import OperationModel
-from models.models import UserModel
+from ..models.models import OperationModel
+from ..models.models import UserModel
 
-from configs.depends import get_db
-from configs.depends import get_current_user
+from ..configs.depends import get_db
+from ..configs.depends import get_current_user
 
 
 router = APIRouter()

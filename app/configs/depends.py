@@ -11,7 +11,7 @@ from pydantic import BaseModel
 from .database import SessionLocal
 from .auth import oauth2_schema
 from .configs import settings
-from models.models import UserModel
+from ..models.models import UserModel
 
 
 class TokenData(BaseModel):

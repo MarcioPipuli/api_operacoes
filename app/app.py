@@ -1,11 +1,11 @@
 from fastapi import FastAPI
-from routes import operations_router
-from routes import user_router
-from routes import external_app_router
+from .routes import operations_router
+from .routes import user_router
+from .routes import external_app_router
 
-from configs.database import SessionLocal
-from configs.database import init_db
-from configs.configs import settings
+from .configs.database import SessionLocal
+from .configs.database import init_db
+from .configs.configs import settings
 
 # Inicializa o banco de dados
 init_db()

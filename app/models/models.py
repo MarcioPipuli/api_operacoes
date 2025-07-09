@@ -8,8 +8,8 @@ from sqlalchemy import ForeignKey
 
 from datetime import datetime
 
-from configs.database import Base
-from configs.configs import settings
+from ..configs.database import Base
+from ..configs.configs import settings
 
 
 class OperationModel(Base):

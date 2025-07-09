@@ -7,10 +7,10 @@ from fastapi import Path
 from sqlalchemy.orm import Session
 from sqlalchemy.future import select
 
-from models.entities import OperationResponse
-from models.models import OperationModel
+from ..models.entities import OperationResponse
+from ..models.models import OperationModel
 
-from configs.depends import get_db
+from ..configs.depends import get_db
 
 
 router = APIRouter()

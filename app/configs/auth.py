@@ -13,7 +13,7 @@ from sqlalchemy.future import select
 
 from jose import jwt
 
-from models.models import UserModel
+from ..models.models import UserModel
 from .configs import settings
 from .security import verificar_senha
 

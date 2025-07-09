@@ -8,8 +8,8 @@ from typing import Optional
 
 from datetime import datetime
 
-from models.enums import OperationType
-from models.enums import Tickers
+from ..models.enums import OperationType
+from ..models.enums import Tickers
 
 
 class OperationCreate(BaseModel):

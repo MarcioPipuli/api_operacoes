@@ -14,16 +14,16 @@ from sqlalchemy.orm import Session
 from sqlalchemy.future import select
 from sqlalchemy.exc import IntegrityError
 
-from models.models import UserModel
-from models.entities import UserBase
-from models.entities import UserCreate
-from models.entities import UserUpdate
+from ..models.models import UserModel
+from ..models.entities import UserBase
+from ..models.entities import UserCreate
+from ..models.entities import UserUpdate
 
-from configs.depends import get_db
-from configs.depends import get_current_user
-from configs.security import gerar_hash_senha
-from configs.auth import autenticar
-from configs.auth import criar_token_acesso
+from ..configs.depends import get_db
+from ..configs.depends import get_current_user
+from ..configs.security import gerar_hash_senha
+from ..configs.auth import autenticar
+from ..configs.auth import criar_token_acesso
 
 
 router = APIRouter()
