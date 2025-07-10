@@ -23,7 +23,7 @@ from ..configs.depends import get_current_user
 
 router = APIRouter()
 
-@router.post('/operations',
+@router.post('/operations/send',
              status_code=status.HTTP_201_CREATED,
              summary='Enviar operação',
              description='Enviar uma operação de compra/venda para o banco de dados.',
@@ -83,7 +83,7 @@ def get_operations_unprocessed(db: Session = Depends(get_db),
 #     return {'details': 'ta funfando o GET UNPROCESSED de operações'}
 
 
-@router.get('/operations/{operation_id}', 
+@router.get('/operations/operation/{operation_id}', 
             status_code=status.HTTP_200_OK,
             summary='Consulta uma operação pelo ID',
             description='Retorna os dados da operação conforme o ID informado.',
@@ -109,7 +109,7 @@ def get_operation_by_id(operation_id: int = Path(..., description='ID da operaç
                                 )
 
 
-@router.delete('/operations/{operation_id}',
+@router.delete('/operations/operation/{operation_id}',
                status_code=status.HTTP_204_NO_CONTENT,
                summary='Excluir operação',
                description='Exclui uma operação específica')
@@ -142,12 +142,12 @@ def delete_operation(operation_id: int = Path(description='ID da operação que 
                                 )
 
 
-@router.patch('/operations/{operation_id}',
+@router.patch('/operations/operation/{operation_id}',
               status_code=status.HTTP_202_ACCEPTED,
               summary='Atualizar operação',
               description='Atualiza os dados de uma operação específica',
               response_model=OperationResponse)
-def patch_operation(operation_id: int = Path(..., description='ID da operação que será consultada'),
+def patch_operation(operation_id: int = Path(..., description='ID da operação que será atualizada'),
                     update_operation:  OperationUpdate = ...,
                     user: UserModel = Depends(get_current_user),
                     db: Session = Depends(get_db)):

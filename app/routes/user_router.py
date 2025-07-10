@@ -1,11 +1,8 @@
 from typing import List
-from typing import Optional
-from typing import Any
 
 from fastapi import APIRouter
 from fastapi import status
 from fastapi import Depends
-from fastapi import Response
 from fastapi import HTTPException
 from fastapi.security import OAuth2PasswordRequestForm
 from fastapi.responses import JSONResponse
@@ -17,7 +14,6 @@ from sqlalchemy.exc import IntegrityError
 from ..models.models import UserModel
 from ..models.entities import UserBase
 from ..models.entities import UserCreate
-from ..models.entities import UserUpdate
 
 from ..configs.depends import get_db
 from ..configs.depends import get_current_user
